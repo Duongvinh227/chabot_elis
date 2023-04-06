@@ -1,0 +1,23 @@
+version: "3.1"
+
+rules:
+
+- rule: nói "tạm biệt" khi khách hàng nói tạm biệt
+  steps:
+  - intent: tạm biệt
+  - action: utter_tạm_biệt
+
+- rule: nói "chào hỏi" khi khách hàng nói tạm biệt
+  steps:
+  - intent: chào hỏi
+  - action: utter_chào_hỏi
+
+#- rule: nói 'tôi là bot hỗ trợ' khi khách hàng thách thức
+#  steps:
+#  - intent: thử thách bot
+#  - action: utter_thử_thách
+
+- rule: nói 'không biết' khi không trả lời được câu hỏi của khách hàng
+  steps:
+  - intent: nlu_fallback
+  - action: utter_ngoài_khả_năng

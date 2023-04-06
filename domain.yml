@@ -1,0 +1,92 @@
+version: "3.1"
+
+intents:
+  - chào hỏi
+  - học tập hôm nay tệ
+  - lấy tên
+  - lấy tên môn học
+  - kế hoạch học tập năm nhất
+  - tên môn học năm nhất
+  - cảm ơn
+  - tạm biệt
+  - kế hoạch học tập cải thiện
+  - chưa rõ
+
+entities:
+  - cust_sex
+  - cust_name
+  - cust_course_title
+
+slots:
+  cust_sex:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: cust_sex
+  cust_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: cust_name
+  cust_course_title:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: cust_course_title
+
+responses:
+  utter_chào_hỏi:
+  - text: "xin chào!mình là chatbot của ulis , bạn cho mình biết tên tiện xưng hô được không ạ?"
+
+  utter_chào_hỏi_có_tên:
+  - text: "Xin chào {cust_sex} {cust_name}. chatbot ulis có thể giúp gì được {cust_sex} {cust_name} ạ?"
+
+  utter_cảm_ơn:
+  - text: "{cust_sex} quá khen ạ"
+  - text: "cảm ơn {cust_sex} nhiều ạ"
+  - text: "hihi,{cust_sex} cứ nói quá"
+
+  utter_tạm_biệt:
+  - text: "tạm biệt {cust_sex},cảm ơn {cust_sex} đã đến"
+  - text: "tạm biệt {cust_sex},chúc {cust_sex} nhiều sức khỏe "
+  - text: "tạm biệt {cust_sex},chúc {cust_sex} nhiều niềm vui"
+  - text: "tạm biệt {cust_sex},chúc {cust_sex} nhiều may mắn"
+
+  utter_chưa_rõ:
+    - text: "em xin lỗi, em đang trong quá trình đào tạo nên chưa đủ dữ liệu để trả lời"
+    - text: "em xin lỗi, em sẽ cố gằng tìm hiểu để trả lời {cust_sex} vào lần sau"
+    - text: "có vẻ hiện tại em chưa cung cấp câu trả lời được vì em đang trong quá trình phát triển"
+
+
+  utter_học_tập_hôm_nay_tệ:
+  - text: "chuyện học là cả đời mà {cust_sex}"
+  - text: "lên kế hoạch cho ngày mai nào {cust_sex}"
+  - text: "em sẽ hỗ trợ {cust_sex} lên kế hoạch học tập nhé"
+
+  utter_kế_hoạch_học_tập_cải_thiện:
+  - text: "vâng , em nghĩ chúng ta nên bắt đầu bằng tên môn học làm {cust_sex} không vui"
+  - text: "được thôi ,vậy chúng ta nên bắt đầu bằng tên môn học làm {cust_sex} không vui"
+
+  utter_lấy_tên_môn_học:
+  - text: "Hừm , môn {cust_course_title} có 3 tín chỉ , kiến thức sẽ bao gồm"
+  - text: "Hừm, đó là 1 môn khó , môn {cust_course_title} có 3 tín chỉ , kiến thức sẽ bao gồm"
+  - text: "Hừm, đó là 1 môn học hay , môn {cust_course_title} có 3 tín chỉ , kiến thức sẽ bao gồm"
+  - text: "môn {cust_course_title} rất thú vị , nó có 3 tín chỉ , kiến thức sẽ bao gồm"
+
+  utter_kế_hoạch_học_tập_năm_nhất:
+  - text: "vâng , em nghĩ chúng ta nên bắt đầu bằng liệt kê các môn học kỳ tới"
+  - text: "được thôi , em nghĩ chúng ta nên bắt đầu bằng kể tên các môn học kỳ tới"
+
+  utter_tên_môn_học_năm_nhất:
+    - text: "năm nhất của elis sẽ có Financial Accounting , Managerial Accounting , Business Law ..."
+    - text: "Financial Accounting , Managerial Accounting , Business Law ... sẽ là các môn năm nhất của viện mình"
+    - text: "viện mình năm nhất có môn Financial Accounting , Managerial Accounting , Business Law ... "
+
+  utter_ngoài_khả_năng:
+    - text: "em xin lỗi, câu hỏi này nằm ngoài khả năng hiện tại của em"
+
+
+
+#session_config:
+#  session_expiration_time: 60
+#  carry_over_slots_to_new_session: true

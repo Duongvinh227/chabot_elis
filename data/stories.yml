@@ -1,0 +1,59 @@
+version: "3.1"
+
+stories:
+
+- story: chào hỏi
+  steps:
+  - intent: chào hỏi
+  - action: utter_chào_hỏi
+  - intent: lấy tên
+  - action: utter_chào_hỏi_có_tên
+  - intent: tạm biệt
+  - action: utter_tạm_biệt
+
+- story: học tập hôm nay tệ
+  steps:
+  - intent: chào hỏi
+  - action: utter_chào_hỏi
+  - intent: lấy tên
+  - action: utter_chào_hỏi_có_tên
+  - intent: học tập hôm nay tệ
+  - action: utter_học_tập_hôm_nay_tệ
+  - intent: cảm ơn
+  - action: utter_cảm_ơn
+  - intent: tạm biệt
+  - action: utter_tạm_biệt
+
+- story: kế hoạch học tập năm nhất
+  steps:
+  - intent: chào hỏi
+  - action: utter_chào_hỏi
+  - intent: lấy tên
+  - action: utter_chào_hỏi_có_tên
+  - intent: kế hoạch học tập năm nhất
+  - action: utter_kế_hoạch_học_tập_năm_nhất
+  - intent: tên môn học năm nhất
+  - action: utter_tên_môn_học_năm_nhất
+  - intent: lấy tên môn học
+  - action: utter_lấy_tên_môn_học
+  - intent: cảm ơn
+  - action: utter_cảm_ơn
+  - intent: tạm biệt
+  - action: utter_tạm_biệt
+
+- story: kế hoạch học tập cải thiện
+  steps:
+  - intent: chào hỏi
+  - action: utter_chào_hỏi
+  - intent: lấy tên
+  - action: utter_chào_hỏi_có_tên
+  - intent: học tập hôm nay tệ
+  - action: utter_học_tập_hôm_nay_tệ
+  - intent: kế hoạch học tập cải thiện
+  - action: utter_kế_hoạch_học_tập_cải_thiện
+  - intent: lấy tên môn học
+  - action: utter_lấy_tên_môn_học
+  - intent: cảm ơn
+  - action: utter_cảm_ơn
+  - intent: tạm biệt
+  - action: utter_tạm_biệt

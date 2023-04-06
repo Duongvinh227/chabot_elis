@@ -1,0 +1,98 @@
+version: "3.1"
+
+nlu:
+- intent: chào hỏi
+  examples: |
+    - hey
+    - hello
+    - hi
+    - chào em
+    - good morning
+    - good evening
+    - chào
+    - chào chị
+    - chào anh
+    - chào bot
+    - chào bạn
+    - good afternoon
+- intent: lấy tên
+  examples: |
+    - [Anh](cust_sex) là [Dương](cust_name)
+    - [a](cust_sex) là [dương](cust_name)
+    - [Chị](cust_sex) là [Hoa](cust_name)
+    - [Chị](cust_sex) là [Quỳnh](cust_name)
+    - [Em](cust_sex) là [Hoa](cust_name)
+    - [Chị](cust_sex) là [mỹ hoa](cust_name)
+    - [Em](cust_sex) là [Bùi Mỹ Hoa](cust_name)
+    - [Chị](cust_sex) là [Hoa](cust_name)
+    - [e](cust_sex) là [Hoa](cust_name)
+    - [c](cust_sex) là [hoa](cust_name)
+    - [ch](cust_sex) là [Hoa](cust_name)
+    - [em](cust_sex) là [mỹ Hoa](cust_name)
+    - [chị](cust_sex) là [Bùi Mỹ Hoa](cust_name)
+- intent: tạm biệt
+  examples: |
+    - bye
+    - bye bye
+    - xong,cảm ơn nhé
+    - tạm biệt
+    - chị đi đây
+    - good bye
+    - xong,cảm ơn nhiều
+
+- intent: chưa rõ
+  examples: |
+    - cụ thể môn đó có những kiến thức gì 
+    - em nói rõ hơn được không
+    - a cần kiến thức cụ thể hơn
+    - em nhầm rồi
+    - em sai rồi
+
+- intent: cảm ơn
+  examples: |
+    - em giỏi quá
+    - cảm ơn em nhiều
+    - cảm ơn em nhiều nhé
+    - không ngờ em giỏi thật đấy
+    - ok,thank em
+    - ok,thank em nhiều
+
+- intent: học tập hôm nay tệ
+  examples: |
+    - hôm nay anh học chán lắm
+    - nay anh học tệ 
+    - hôm nay anh học rất buồn  
+    - hôm nay chị học chán lắm
+    - nay chị học tệ 
+    - hôm nay chị học rất buồn
+
+- intent: kế hoạch học tập cải thiện
+  examples: |
+    - cải thiện việc học ntn
+    - giờ làm sao cải thiện việc học
+    - giờ làm sao việc học tốt hơn
+    - cải thiện việc học như thế nào 
+
+- intent: lấy tên môn học
+  examples: |
+    - môn là [Financial Accounting(cust_course_title)
+    - đó là môn [Financial Accounting](cust_course_title)
+    - môn [Finncial Accounting](cust_course_title) chẳng hạn
+    - môn [Finncial Accounting](cust_course_title) học ra sao 
+    - môn [Finncial Accounting](cust_course_title) nên học như thế nào 
+    - môn [Business Law](cust_course_title) chẳng hạn
+    - môn [Business Law](cust_course_title) học ra sao 
+    - môn [Business Law]](cust_course_title) nên học ntn
+
+- intent: kế hoạch học tập năm nhất
+  examples: |
+    - kế hoạch học tập như thế nào
+    - kế hoạch học tập ntn
+    - chị học năm nhất thì nên học như thế nào
+    - chị học năm nhất thì nên học ntn
+- intent: tên môn học năm nhất
+  examples: |
+    - anh mới vào năm nhất nên chưa biết tên các môn học
+    - chị mới vào năm nhất nên chưa biết tên các môn học
+    - anh là sinh viên năm nhất , cần học những môn gì
+    
